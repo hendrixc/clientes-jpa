@@ -12,6 +12,6 @@ public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
     Cliente findByTipoIdentificacionAndIdentificacion(String tipoIdentificacion, String identificacion);
     List<Cliente> findByApellidosOrderByNombres(String apellidos);
     List<Cliente> findByApellidosLikeOrderByNombres(String apellidos);
-    List<Cliente> findByIngresosGratherThan(BigDecimal ingresos);
+    List<Cliente> findByIngresosGreaterThan(BigDecimal ingresos);
     
 }
