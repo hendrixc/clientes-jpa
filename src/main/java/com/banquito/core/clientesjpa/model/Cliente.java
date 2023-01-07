@@ -1,5 +1,6 @@
 package com.banquito.core.clientesjpa.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -19,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "CLIENTE")
-public class Cliente {
+public class Cliente implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

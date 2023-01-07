@@ -1,5 +1,7 @@
 package com.banquito.core.clientesjpa.model;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
@@ -14,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name="CLIENTE_INFORMACION_CONTACTO")
-public class ClienteInformacionContacto {
+public class ClienteInformacionContacto implements Serializable{
     
     @EmbeddedId
     private ClienteInformacionContactoPK pk;
