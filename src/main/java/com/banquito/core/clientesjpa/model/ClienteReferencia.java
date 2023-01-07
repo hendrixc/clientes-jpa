@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Version;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -29,6 +30,8 @@ public class ClienteReferencia {
     private String telefonoMovil;
     @Column(name = "CORREO_ELECTRONICO", length = 50, nullable = false)
     private String correoElectronico;
+    @Version
+    private Long version;
     
     @ManyToOne
     @JoinColumn(name="COD_CLIENTE", insertable = false, updatable = false, nullable = false)

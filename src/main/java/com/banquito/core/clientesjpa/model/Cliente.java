@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jakarta.persistence.Version;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -46,6 +47,8 @@ public class Cliente {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "FECHA_CREACION", nullable = false)
     private Date fechaCreacion;
+    @Version
+    private Long version;
 
     public Cliente(Integer codigo) {
         this.codigo = codigo;

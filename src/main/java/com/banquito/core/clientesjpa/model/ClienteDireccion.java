@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Version;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -27,6 +28,8 @@ public class ClienteDireccion {
     private Float latitud;
     @Column(name = "LONGITUD", nullable = true)
     private Float longitud;
+    @Version
+    private Long version;
 
     @ManyToOne
     @JoinColumn(name="COD_CLIENTE", insertable = false, updatable = false, nullable = false)
